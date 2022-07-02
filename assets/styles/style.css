@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --primary-font: 'Roboto', sans-serif;
+
+    --hue: 195;
+    --button-favorite-color: hsl(var(--hue), 91%, 25%);
+    --thead-color: hsl(var(--hue), 72%, 13%);
+    --tr-odd-color: hsla(var(--hue), 61%, 6%, 0.5);
+    --tr-even-color: hsl(var(--hue), 65%, 7%);
+    --border-table-collor: hsl(var(--hue), 31%, 42%)
+    --input-color: hsl(var(--hue), 65%, 7%);
+    --main-text-color-: hsl(240, 9%, 89%);
+    --alternate-text-color: hsl(189, 4%, 32%);
+    --bg-color: hsl(0, 0%, 0%);
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: var(--primary-font);
+    background-color: var(--bg-color);
+    color: var(--main-text-color-);
+
+}
+
+body * {
+    font-size: 1.6rem;
+    font-family: var(--primary-font);
+}
+
+main {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+section {
+    margin-top: 11.5rem;
+    max-height: 4.8rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#search {
+    display: flex;
+    align-items: stretch;
+    gap: .8rem;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+}
+
+#search input {
+    background-color: var(--input-color);
+    border: none;
+    width: 46.2rem;
+    padding: 1.6rem;
+    border-radius: .5rem;
+}
+
+#search button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .85rem;
+    padding: 1.3rem 3.2rem;
+    background-color: var(--button-favorite-color);
+
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all .8s;
+}
+
+#search button img {
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+#search button p {
+    color: var(--main-text-color-);
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+#search button:hover {
+    filter: brightness(1.5);
+}
+
+table {
+    margin-top: 8.7rem;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    border: 1px solid hsl(191, 31%, 42%);
+    border-radius: 1.2rem;
+}
+
+table thead {
+    background-color: var(--thead-color);
+}
+
+table thead th:first-child {
+    border-top-left-radius: 1.2rem;
+}
+
+table thead th:last-child {
+    border-top-right-radius: 1.2rem;
+}
+
+.user img {
+    height: 5.6rem;
+    width: 5.6rem;
+    object-fit: cover;
+    border-radius: 50%;
+
+}

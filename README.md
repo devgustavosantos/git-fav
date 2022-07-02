@@ -15,11 +15,11 @@ Esse projeto é uma aplicação para guardar seus perfis favoritos do Github.
 ## Pré-Visualização
 
 <h1 align="center" style="max-width: 412px; margin: auto;">
-    <img src="./assets/image/preview/place-holder.jpg" alt="gif da versão mobile">
+    <img src="./assets/images/preview/place-holder.jpg" alt="gif da versão mobile">
 </h1>
 
 <h1 align="center">
-    <img src="./assets/image/preview/place-holder.jpg" alt="gif da versão desktop">
+    <img src="./assets/images/preview/place-holder.jpg" alt="gif da versão desktop">
 </h1>
 
 </br>

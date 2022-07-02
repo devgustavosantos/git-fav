@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitFav</title>
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <section>
+        <img
+          src="assets/images/Gitfav.svg"
+          alt="Estrela do aplicativo Gitfav"
+        />
+        <div id="search">
+          <label class="sr-only" for="user-search"
+            >Digite o Github username que quer favoritar</label
+          >
+          <input
+            type="text"
+            id="user-search"
+            placeholder="Digite o Github username que quer favoritar"
+          />
+          <button>
+            <img src="assets/images/star.svg" alt="Imagem de uma estrala" />
+            <p>Favoritar</p>
+          </button>
+        </div>
+      </section>
+      <table>
+        <thead>
+          <tr>
+            <th>Usuário</th>
+            <th>Repositories</th>
+            <th>Followers</th>
+            <th>Ação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="user">
+            <td>
+              <img
+                src="https://github.com/maykbrito.png"
+                alt="Foto de Mayk Brito"
+              />
+              <a href="https://github.com/maykbrito" target="_blank">
+                <p>Mayk Brito</p>
+                <span>/maykbrito</span>
+              </a>
+            </td>
+            <td>123</td>
+            <td>1234</td>
+            <td>
+              <button class="remover">Remover</button>
+            </td>
+          </tr>
+          <tr class="user">
+            <td>
+              <img
+                src="https://github.com/maykbrito.png"
+                alt="Foto de Mayk Brito"
+              />
+              <a href="https://github.com/maykbrito" target="_blank">
+                <p>Mayk Brito</p>
+                <span>/maykbrito</span>
+              </a>
+            </td>
+            <td>123</td>
+            <td>1234</td>
+            <td>
+              <button class="remover">Remover</button>
+            </td>
+          </tr>
+          <tr class="user">
+            <td>
+              <img
+                src="https://github.com/maykbrito.png"
+                alt="Foto de Mayk Brito"
+              />
+              <a href="https://github.com/maykbrito" target="_blank">
+                <p>Mayk Brito</p>
+                <span>/maykbrito</span>
+              </a>
+            </td>
+            <td>123</td>
+            <td>1234</td>
+            <td>
+              <button class="remover">Remover</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </body>
+</html>

@@ -14,7 +14,7 @@
     --thead-color: hsl(var(--hue), 72%, 13%);
     --tr-odd-color: hsla(var(--hue), 61%, 6%, 0.5);
     --tr-even-color: hsl(var(--hue), 65%, 7%);
-    --border-table-collor: hsl(var(--hue), 31%, 42%)
+    --border-table-collor: hsl(var(--hue), 31%, 42%);
     --input-color: hsl(var(--hue), 65%, 7%);
     --main-text-color-: hsl(240, 9%, 89%);
     --alternate-text-color: hsl(189, 4%, 32%);
@@ -104,22 +104,67 @@ section {
 table {
     margin-top: 8.7rem;
     width: 100%;
+    height: 100%;
     text-align: left;
+    overflow: hidden;
     border-collapse: collapse;
-    border: 1px solid hsl(191, 31%, 42%);
-    border-radius: 1.2rem;
+    border-radius: 1.2rem; 
+    outline: 1px solid var(--border-table-collor);
 }
 
 table thead {
     background-color: var(--thead-color);
+    f
 }
 
-table thead th:first-child {
-    border-top-left-radius: 1.2rem;
+table thead * {
+    background-color: var(--thead-color);
+    font-size: 2rem;
+    font-weight: 700;
 }
 
-table thead th:last-child {
-    border-top-right-radius: 1.2rem;
+table thead th:first-child,
+table tbody tr td:first-child {
+    width: 50.4rem;
+}
+
+table thead th:nth-child(2),
+table tbody tr td:nth-child(2) {
+    width: 21.8rem;
+}
+
+table thead th:nth-child(3),
+table tbody tr td:nth-child(3) {
+    width: 22rem;
+}
+
+table thead th,
+table tbody tr td {
+    padding: 1.6rem 4rem;
+}
+
+/* table tbody tr {
+    min-height: 10.4rem;
+} */
+
+table tbody tr td:first-child {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: var(--tr-odd-color);
+}
+
+table tbody tr:nth-child(even) {
+    background-color: var(--tr-even-color);
+    border-top:  1px solid var(--border-table-collor);
+    border-bottom:  1px solid var(--border-table-collor);
+}
+
+table tbody tr:last-child {
+    border-bottom: 0;
 }
 
 .user img {
@@ -127,5 +172,27 @@ table thead th:last-child {
     width: 5.6rem;
     object-fit: cover;
     border-radius: 50%;
+}
+
+.user a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.user p, .user td {
+    font-family: var(--primary-font);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 3.2rem;
+}
+
+.user a span {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 3.2rem;
+}
+
+.user a:checked{
 
 }

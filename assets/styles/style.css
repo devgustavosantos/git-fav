@@ -23,17 +23,16 @@
     --bg-color: hsl(0, 0%, 0%);
 }
 
+
 body {
     font-size: 1.6rem;
     font-family: var(--primary-font);
     background-color: var(--bg-color);
     color: var(--main-text-color-);
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    padding: 11.5rem 0;
 }
+
 
 body * {
     font-size: 1.6rem;
@@ -42,11 +41,10 @@ body * {
 
 main {
     max-width: 1120px;
-
+    margin: auto;
 }
 
 section {
-
     max-height: 4.8rem;
     display: flex;
     justify-content: space-between;
@@ -85,14 +83,21 @@ section {
     gap: .85rem;
     padding: 1.3rem 3.2rem;
     background-color: var(--button-favorite-color);
-
+    
     border-radius: .5rem;
     cursor: pointer;
+    transition: all .8s;
+
+    color: var(--main-text-color-);
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 700;
     transition: all .8s;
 }
 
 #search button:hover {
     background-color: white;
+    color: var(--button-favorite-color);
 }
 
 #search button:hover p {
@@ -114,19 +119,12 @@ section {
     fill: var(--button-favorite-color);
 }
 
-#search button p {
-    color: var(--main-text-color-);
-    text-transform: uppercase;
-    font-size: 1.4rem;
-    font-weight: 700;
-    transition: all .8s;
-}
 
 .table-container {
     width: 100%;
     border: 1px solid #4A808C;
     border-radius: 1.2rem;
-    min-width: 85rem;
+    /* min-width: 85rem; */
     margin-top: 8.7rem;
     overflow-y: hidden;
 }
@@ -134,15 +132,14 @@ section {
 .table-content {
     display: flex;
     flex-direction: column;
-    overflow-y: overlay;
+    overflow: overlay;
     max-height: 59rem;
-    position: relative;
 }
 
 .table-content::-webkit-scrollbar {
     width: 22px;
     border-radius: 9999px;
-
+    
 }
 
 
@@ -159,11 +156,12 @@ table {
     text-align: left;
     border-collapse: collapse;
     border-radius: 1.2rem;
-    overflow: hidden;
 }
 
 table thead {
     background-color: var(--thead-color);
+    position: sticky;
+    top: 0;
 }
 
 table thead * {
@@ -195,38 +193,14 @@ table tbody,
 table thead {
     display: block;
     width: 100%;
-
+    
 }
 
-table .table-content {
-    height: 62.4rem;
-    overflow-y: overlay;
-}
-
-table .table-content::-webkit-scrollbar {
-    width: 6px;
-    border-radius: 6px;
-}
-
-table .table-content::-webkit-scrollbar-track {
-    display: none;
-}
-
-
-table .table-content::-webkit-scrollbar-thumb {
-    width: 6px;
-    background-color: var(--scroll-bar-color);
-    border-radius: 1rem;
-    margin: 0 auto;
-}
-
-
-
-table tbody tr td:first-child {
+table tbody {
     display: flex;
-    align-items: center;
-    gap: 1.6rem;
+    flex-direction: column;
 }
+
 
 table tbody tr:nth-child(odd) {
     background-color: var(--tr-odd-color);
@@ -238,8 +212,15 @@ table tbody tr:nth-child(even) {
     border-bottom: 1px solid var(--border-table-collor);
 }
 
-table tbody tr:last-child {
-    border-bottom: 0;
+table tbody tr {
+    display: flex;
+    align-items: center;
+}
+
+table tbody tr td:first-child {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
 }
 
 .user img {
@@ -275,3 +256,7 @@ table tbody tr:last-child {
     border: none;
     cursor: pointer;
 }
+
+
+/*
+*/

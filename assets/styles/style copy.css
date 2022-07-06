@@ -19,7 +19,6 @@
     --input-color: hsl(var(--hue), 65%, 7%);
     --main-text-color-: hsl(240, 9%, 89%);
     --alternate-text-color: hsl(189, 4%, 32%);
-    --scroll-bar-color: hsla(var(--hue), 31%, 42%, 1);
     --bg-color: hsl(0, 0%, 0%);
 }
 
@@ -28,10 +27,6 @@ body {
     font-family: var(--primary-font);
     background-color: var(--bg-color);
     color: var(--main-text-color-);
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
 }
 
@@ -42,11 +37,11 @@ body * {
 
 main {
     max-width: 1120px;
-
+    margin: 0 auto;
 }
 
 section {
-
+    margin-top: 11.5rem;
     max-height: 4.8rem;
     display: flex;
     justify-content: space-between;
@@ -95,7 +90,7 @@ section {
     background-color: white;
 }
 
-#search button:hover p {
+#search button:hover p{
     color: var(--button-favorite-color);
 }
 
@@ -122,44 +117,17 @@ section {
     transition: all .8s;
 }
 
-.table-container {
-    width: 100%;
-    border: 1px solid #4A808C;
-    border-radius: 1.2rem;
-    min-width: 85rem;
-    margin-top: 8.7rem;
-    overflow-y: hidden;
-}
 
-.table-content {
-    display: flex;
-    flex-direction: column;
-    overflow-y: overlay;
-    max-height: 59rem;
-    position: relative;
-}
-
-.table-content::-webkit-scrollbar {
-    width: 22px;
-    border-radius: 9999px;
-
-}
-
-
-.table-content::-webkit-scrollbar-thumb {
-    width: 6px;
-    background-color: transparent;
-    border-radius: 8rem;
-    box-shadow: inset 0 0 0px 6px var(--scroll-bar-color);
-    border: solid 8px transparent;
-}
 
 table {
+    margin-top: 8.7rem;
     width: 100%;
+    height: 100%;
     text-align: left;
+    overflow: hidden;
     border-collapse: collapse;
     border-radius: 1.2rem;
-    overflow: hidden;
+    outline: 1px solid var(--border-table-collor);
 }
 
 table thead {
@@ -167,6 +135,7 @@ table thead {
 }
 
 table thead * {
+    background-color: var(--thead-color);
     font-size: 2rem;
     font-weight: 700;
 }
@@ -190,37 +159,6 @@ table thead th,
 table tbody tr td {
     padding: 1.6rem 4rem;
 }
-
-table tbody,
-table thead {
-    display: block;
-    width: 100%;
-
-}
-
-table .table-content {
-    height: 62.4rem;
-    overflow-y: overlay;
-}
-
-table .table-content::-webkit-scrollbar {
-    width: 6px;
-    border-radius: 6px;
-}
-
-table .table-content::-webkit-scrollbar-track {
-    display: none;
-}
-
-
-table .table-content::-webkit-scrollbar-thumb {
-    width: 6px;
-    background-color: var(--scroll-bar-color);
-    border-radius: 1rem;
-    margin: 0 auto;
-}
-
-
 
 table tbody tr td:first-child {
     display: flex;

@@ -30,7 +30,6 @@ body {
     background-color: var(--bg-color);
     color: var(--main-text-color-);
     min-height: 100vh;
-    padding: 11.5rem 0;
 }
 
 
@@ -56,14 +55,25 @@ body * {
 }
 
 main {
-    max-width: 1120px;
+    height: 100vh;
+    padding: min(11.8rem, 5vw) 0;
+    width: min(90vw, 1120px);
     margin: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 section {
     max-height: 4.8rem;
     display: flex;
     justify-content: space-between;
+    gap: 1.6rem;
+}
+
+section > img {
+    width: 18.6rem;
+    height: 3.2rem;
 }
 
 #search {
@@ -76,7 +86,7 @@ section {
 #search input {
     background-color: var(--input-color);
     border: none;
-    width: 46.2rem;
+    width: min(47vw, 46.2rem);
     padding: 1.6rem;
     border-radius: .5rem;
     color: var(--alternate-text-color);
@@ -126,34 +136,58 @@ section {
     fill: var(--button-favorite-color);
 }
 
-table {
+.table-container {
+    margin-top: min(8.7rem, 10vw);
     width: 100%;
-    margin-top: 8.7rem;
+    overflow: overlay;
+    border: 1px solid #4A808C;
+    border-radius: 1.2rem;
+}
+
+.table-container::-webkit-scrollbar {
+    width: 22px;
+    height: 22px;
+    border-radius: 9999px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    width: 6px;
+    background-color: transparent;
+    border-radius: 8rem;
+    box-shadow: inset 0 0 0px 6px var(--scroll-bar-color);
+    border: solid 8px transparent;
+}
+
+.table-container::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+table {
     text-align: left;
     border-collapse: collapse;
-    border-radius: 1.2rem;
-    outline: 1px solid #4A808C;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-
 }
 
 table thead {
     background-color: var(--thead-color);
+    display: block;
     position: sticky;
     top: 0;
 }
+
 
 table thead * {
     font-size: 2rem;
     font-weight: 700;
 }
 
+table thead tr,
+table tbody tr {
+  display: flex;
+}
+
 table thead th:first-child,
 table tbody.filled-table tr td:first-child {
-    width: 50.4rem;
+    width: 50.2rem;
 }
 
 table thead th:nth-child(2),
@@ -166,42 +200,18 @@ table tbody.filled-table tr td:nth-child(3) {
     width: 22rem;
 }
 
+table thead th:nth-child(4),
+table tbody.filled-table tr td:nth-child(4) {
+    width: 17.8rem;
+}
+
 table thead th,
 table tbody.filled-table tr td {
     padding: 1.6rem 4rem;
 }
 
-table tbody.filled-table {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    max-height: 61.8rem;
-    overflow: auto;
-    /* Para para contornar o problema no Firefox */
-    overflow: overlay;
-    /* Para que o scroll de cima seja substituido pelo certo, mas isso apenas qunado o navegador for o chrome */
-    scrollbar-color: var(--scroll-bar-color) transparent;
-    scrollbar-width: thin;
-}
 
-table tbody.filled-table::-webkit-scrollbar {
-    width: 22px;
-    border-radius: 9999px;
-    /* boda estilo pill button */
-}
-
-table tbody.filled-table::-webkit-scrollbar-thumb {
-    width: 6px;
-    background-color: transparent;
-    /* para dar o efeito de margin */
-    border-radius: 8rem;
-    box-shadow: inset 0 0 0px 6px var(--scroll-bar-color);
-    /* para dar a cor do scroll*/
-    border: solid 8px transparent;
-    /* para dar o efeito de margin */
-}
-
-tbody.table-empty {
+tbody.empty-table {
     background-color: var(--tr-odd-color);
     min-height: 61.8rem;
     display: flex;
@@ -209,14 +219,15 @@ tbody.table-empty {
     align-items: center;
 }
 
-tbody.table-empty tr {
+
+tbody.empty-table tr {
     width: 100%;
     height: 100%;
     flex-grow: 1;
 }
 
 
-tbody.table-empty tr td {
+tbody.empty-table tr td {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -224,12 +235,12 @@ tbody.table-empty tr td {
     gap: 6rem;
 }
 
-tbody.table-empty td svg {
+tbody.empty-table td svg {
     width: 13.2rem;
     height: 12.5rem;
 }
 
-tbody.table-empty td p {
+tbody.empty-table td p {
     font-weight: 700;
     font-size: 40px;
     color: #4E5455;
@@ -263,6 +274,7 @@ tbody.filled-table tr td:first-child {
     border-radius: 50%;
 }
 
+
 .user a {
     text-decoration: none;
     color: white;
@@ -290,3 +302,38 @@ tbody.filled-table tr td:first-child {
     cursor: pointer;
 }
 
+@media(max-width: 868px) {
+    section {
+        max-height: initial;
+        align-items: center;
+        justify-content: stretch;
+        flex-direction: column;
+    }
+
+    section > img {
+        width: 70vw;
+        height: 13vw;
+    }
+
+    #search {
+        margin-top: 5vw;
+        width: 100%;
+    }
+
+    #search input {
+        width: 100%;
+    }
+
+    .table-container {
+        margin-top: 10vw;
+    }
+}
+
+
+@media(max-width: 574px) {
+    #search {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.6rem;
+    }
+}

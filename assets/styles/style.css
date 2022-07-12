@@ -139,6 +139,7 @@ section > img {
 .table-container {
     margin-top: min(8.7rem, 10vw);
     width: 100%;
+    overflow: auto;
     overflow: overlay;
     border: 1px solid #4A808C;
     border-radius: 1.2rem;

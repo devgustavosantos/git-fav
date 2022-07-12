@@ -17,16 +17,6 @@ function consultOrder(user) {
 //Manipulando os dados ----------------------------------------------------------------------------
 let registeredUsers;
 
-const favoriteButton = root.querySelector('#search button');
-const userSearch = root.querySelector('#search input');
-
-favoriteButton.addEventListener('click', addRequest);
-userSearch.addEventListener('keydown', function (e) {
-    if (e.key == 'Enter') {
-        addRequest();
-    }
-});
-
 function addRequest() {
     const { value } = userSearch;
     userSearch.value = '';
@@ -71,6 +61,14 @@ function loadUsers() {
     registeredUsers = JSON.parse(localStorage.getItem('@git-fav')) || [];
 }
 
+function deleteUser(userToBeDeleted) {
+    registeredUsers = registeredUsers.filter(
+        (users) => users.login != userToBeDeleted
+    );
+    updateTable();
+    saveUsers();
+}
+
 //Mundando a tela ---------------------------------------------------------------------------------
 function trModel() {
     const tr = document.createElement('tr');
@@ -88,7 +86,7 @@ function trModel() {
     <td class="repositories">123</td>
     <td class="followers">1234</td>
     <td>
-      <button class="remover">Remover</button>
+      <button class="remove-user">Remover</button>
     </td>
     `;
 
@@ -97,12 +95,21 @@ function trModel() {
 }
 
 function updateTable() {
-    clearTable();
-    registeredUsers.forEach((user) => {
-        const trTemplate = trModel();
-        const newTr = changeContent(trTemplate, user);
-        tbody.append(newTr);
-    });
+    const hasSavedUsers = registeredUsers.length;
+
+    if (!hasSavedUsers) {
+        clearTable();
+        showEmptyTable();
+    } else {
+        clearTable();
+        showFilledTable();
+        registeredUsers.forEach((user) => {
+            const trTemplate = trModel();
+            const newTr = changeContent(trTemplate, user);
+            tbody.append(newTr);
+        });
+        addEventToRemove();
+    }
 }
 
 function clearTable() {
@@ -120,6 +127,48 @@ function changeContent(tr, user) {
     tr.querySelector('td.followers').textContent = `${user.followers}`;
 
     return tr;
+}
+
+function showEmptyTable() {
+    const emptyTable = root.querySelector('table tbody.empty-table');
+    const filledTable = root.querySelector('table tbody.filled-table');
+
+    emptyTable.classList.remove('hiden');
+    filledTable.classList.add('hidden');
+}
+
+function showFilledTable() {
+    const emptyTable = root.querySelector('table tbody.empty-table');
+    const filledTable = root.querySelector('table tbody.filled-table');
+
+    emptyTable.classList.add('hiden');
+    filledTable.classList.remove('hidden');
+}
+
+//Eventos -----------------------------------------------------------------------------------------
+const favoriteButton = root.querySelector('#search button');
+const userSearch = root.querySelector('#search input');
+
+favoriteButton.addEventListener('click', addRequest);
+userSearch.addEventListener('keydown', function (e) {
+    if (e.key == 'Enter') {
+        addRequest();
+    }
+});
+
+function addEventToRemove() {
+    const removeButtons = root.querySelectorAll(
+        'table tbody.filled-table button.remove-user'
+    );
+
+    removeButtons.forEach((button) =>
+        button.addEventListener('click', function () {
+            const userOfThisButton = button.parentNode.parentNode
+                .querySelector('span')
+                .textContent.replace('/', '');
+            deleteUser(userOfThisButton);
+        })
+    );
 }
 
 loadUsers();

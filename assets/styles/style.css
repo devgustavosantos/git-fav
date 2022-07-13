@@ -194,22 +194,22 @@ table tbody tr {
 
 table thead th:first-child,
 table tbody.filled-tbody tr td:first-child {
-    width: 50.2rem;
+    width: clamp(40rem, 35rem + 12vw, 50.2rem);
 }
 
 table thead th:nth-child(2),
 table tbody.filled-tbody tr td:nth-child(2) {
-    width: 21.8rem;
+    width: clamp(15rem, 10rem + 10vw, 21.8rem);
 }
 
 table thead th:nth-child(3),
 table tbody.filled-tbody tr td:nth-child(3) {
-    width: 22rem;
+    width: clamp(13rem, 8rem + 11vw, 22rem);
 }
 
 table thead th:nth-child(4),
 table tbody.filled-tbody tr td:nth-child(4) {
-    width: 17.8rem;
+    width: clamp(13rem, 8rem + 10vw, 17.8rem);
 }
 
 table thead th,

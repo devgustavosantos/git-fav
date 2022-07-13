@@ -1,8 +1,10 @@
-# GitFav
-
+# ❤ GitFav
 Esse projeto é uma aplicação para guardar seus perfis favoritos do Github.
+<h1 align="center">
+    <img src="./assets/images/preview/cover.jpg" alt="Capa do projeto">
+</h1>
 
-## Sumário
+## 📖Sumário
 - [Pré-Visualização](#pré-visualização)
 - [Aviso](#aviso)
 - [Sobre](#sobre)
@@ -12,7 +14,7 @@ Esse projeto é uma aplicação para guardar seus perfis favoritos do Github.
 
 </br>
 
-## Pré-Visualização
+## 🎬 Pré-Visualização
 
 <h1 align="center" style="max-width: 412px; margin: auto;">
     <img src="./assets/images/preview/place-holder.jpg" alt="gif da versão mobile">
@@ -24,7 +26,7 @@ Esse projeto é uma aplicação para guardar seus perfis favoritos do Github.
 
 </br>
 
-## Aviso
+## 📢 Aviso
 
 - O projeto **está em andamento**, por isso é normal que bugs aconteçam.
 
@@ -34,7 +36,7 @@ Esse projeto é uma aplicação para guardar seus perfis favoritos do Github.
 
 </br>
 
-## Sobre
+## 📝Sobre
 
 Este é um dos projetos propostos no programa [Explorer da Rocketseat](https://www.rocketseat.com.br/explorer), os [detalhes estão aqui](https://efficient-sloth-d85.notion.site/GitFav-f8ff1c18b23745c0b46cd8d61f74b596), mas basicamente é uma aplicação que busca perfis no github e apresenta eles em uma tabela.
 
@@ -48,7 +50,7 @@ Além de trabalhar o HTML, CSS, JS e Git, o projeto tem a intenção de trabalha
 
 </br>
 
-## Tecnologias
+## 💾 Tecnologias
 
 - **HTML** - usada para fazer a estrutura do conteúdo;
 - **CSS** - utilizada para fazer a estilização dos elementos;
@@ -57,19 +59,19 @@ Além de trabalhar o HTML, CSS, JS e Git, o projeto tem a intenção de trabalha
 
 </br>
 
-## Funcionalidades
+## 🔨 Funcionalidades
 
-- [ ] Apresentar uma tabela;
-- [ ] Buscar usuários do github;
-- [ ] Mostrar usuários adicionados anteriormente (se houver);
-- [ ] Excluir um usuário que já foi adicionado;
-- [ ] Alertar que o usuário  já foi adicionado;
-- [ ] Alertar que o usuário não foi encontrado.
+- [x] Apresentar uma tabela;
+- [x] Buscar usuários do github;
+- [x] Mostrar usuários adicionados anteriormente (se houver);
+- [x] Excluir um usuário que já foi adicionado;
+- [x] Alertar que o usuário  já foi adicionado;
+- [x] Alertar que o usuário não foi encontrado.
 
 
 </br>
 
-## Autor
+## 🤓 Autor
 
 Feito com ❤ por Dev Gustavo Santos 😀 Veja meu [Linkedin.](https://www.linkedin.com/in/devgustavosantos/)
 

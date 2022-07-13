@@ -1,5 +1,5 @@
 const root = document.querySelector('main');
-const tbody = root.querySelector('table tbody.filled-table');
+const tbody = root.querySelector('table tbody.filled-tbody');
 
 //Requisitando dados ------------------------------------------------------------------------------
 function consultOrder(user) {
@@ -49,7 +49,7 @@ async function addUser(requestedUser) {
         updateTable();
         saveUsers();
     } catch (erro) {
-        console.log(erro);
+        alert(erro);
     }
 }
 
@@ -130,19 +130,23 @@ function changeContent(tr, user) {
 }
 
 function showEmptyTable() {
-    const emptyTable = root.querySelector('table tbody.empty-table');
-    const filledTable = root.querySelector('table tbody.filled-table');
+    const emptyTable = root.querySelector('div.table-container');
+    const emptyTbody = root.querySelector('table tbody.empty-tbody');
+    const filledTbody = root.querySelector('table tbody.filled-tbody');
 
-    emptyTable.classList.remove('hiden');
-    filledTable.classList.add('hidden');
+    emptyTable.classList.add('table-container-table-filled');
+    emptyTbody.classList.remove('hiden');
+    filledTbody.classList.add('hidden');
 }
 
 function showFilledTable() {
-    const emptyTable = root.querySelector('table tbody.empty-table');
-    const filledTable = root.querySelector('table tbody.filled-table');
+    const emptyTable = root.querySelector('div.table-container');
+    const emptyTbody = root.querySelector('table tbody.empty-tbody');
+    const filledTbody = root.querySelector('table tbody.filled-tbody');
 
-    emptyTable.classList.add('hiden');
-    filledTable.classList.remove('hidden');
+    emptyTable.classList.remove('table-container-table-filled');
+    emptyTbody.classList.add('hiden');
+    filledTbody.classList.remove('hidden');
 }
 
 //Eventos -----------------------------------------------------------------------------------------
@@ -158,15 +162,20 @@ userSearch.addEventListener('keydown', function (e) {
 
 function addEventToRemove() {
     const removeButtons = root.querySelectorAll(
-        'table tbody.filled-table button.remove-user'
+        'table tbody.filled-tbody button.remove-user'
     );
 
     removeButtons.forEach((button) =>
         button.addEventListener('click', function () {
-            const userOfThisButton = button.parentNode.parentNode
-                .querySelector('span')
-                .textContent.replace('/', '');
-            deleteUser(userOfThisButton);
+            const reallyWantToDelete = confirm('Realmente deseja excluir?');
+
+            if (reallyWantToDelete) {
+                const userOfThisButton = button.parentNode.parentNode
+                    .querySelector('span')
+                    .textContent.replace('/', '');
+
+                deleteUser(userOfThisButton);
+            }
         })
     );
 }

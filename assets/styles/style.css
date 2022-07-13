@@ -145,6 +145,11 @@ section > img {
     border-radius: 1.2rem;
 }
 
+.table-container-table-filled {
+    height: 100%;
+
+}
+
 .table-container::-webkit-scrollbar {
     width: 22px;
     height: 22px;
@@ -166,6 +171,7 @@ section > img {
 table {
     text-align: left;
     border-collapse: collapse;
+    height: calc(100% - 5.6rem);
 }
 
 table thead {
@@ -187,48 +193,48 @@ table tbody tr {
 }
 
 table thead th:first-child,
-table tbody.filled-table tr td:first-child {
+table tbody.filled-tbody tr td:first-child {
     width: 50.2rem;
 }
 
 table thead th:nth-child(2),
-table tbody.filled-table tr td:nth-child(2) {
+table tbody.filled-tbody tr td:nth-child(2) {
     width: 21.8rem;
 }
 
 table thead th:nth-child(3),
-table tbody.filled-table tr td:nth-child(3) {
+table tbody.filled-tbody tr td:nth-child(3) {
     width: 22rem;
 }
 
 table thead th:nth-child(4),
-table tbody.filled-table tr td:nth-child(4) {
+table tbody.filled-tbody tr td:nth-child(4) {
     width: 17.8rem;
 }
 
 table thead th,
-table tbody.filled-table tr td {
+table tbody.filled-tbody tr td {
     padding: 1.6rem 4rem;
 }
 
 
-tbody.empty-table {
+tbody.empty-tbody {
     background-color: var(--tr-odd-color);
-    min-height: 61.8rem;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 
-tbody.empty-table tr {
+tbody.empty-tbody tr {
     width: 100%;
     height: 100%;
     flex-grow: 1;
 }
 
 
-tbody.empty-table tr td {
+tbody.empty-tbody tr td {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -236,33 +242,33 @@ tbody.empty-table tr td {
     gap: 6rem;
 }
 
-tbody.empty-table td svg {
+tbody.empty-tbody td svg {
     width: 13.2rem;
     height: 12.5rem;
 }
 
-tbody.empty-table td p {
+tbody.empty-tbody td p {
     font-weight: 700;
     font-size: 40px;
     color: #4E5455;
 }
 
-tbody.filled-table tr:nth-child(odd) {
+tbody.filled-tbody tr:nth-child(odd) {
     background-color: var(--tr-odd-color);
 }
 
-tbody.filled-table tr:nth-child(even) {
+tbody.filled-tbody tr:nth-child(even) {
     background-color: var(--tr-even-color);
     border-top: 1px solid var(--border-table-collor);
     border-bottom: 1px solid var(--border-table-collor);
 }
 
-tbody.filled-table tr {
+tbody.filled-tbody tr {
     display: flex;
     align-items: center;
 }
 
-tbody.filled-table tr td:first-child {
+tbody.filled-tbody tr td:first-child {
     display: flex;
     align-items: center;
     gap: 1.6rem;

@@ -4,7 +4,7 @@ Esse projeto é uma aplicação para guardar seus perfis favoritos do Github.
     <img src="./assets/images/preview/cover.jpg" alt="Capa do projeto">
 </h1>
 
-## 📖Sumário
+## 📖 Sumário
 - [Pré-Visualização](#pré-visualização)
 - [Aviso](#aviso)
 - [Sobre](#sobre)
@@ -36,7 +36,7 @@ Esse projeto é uma aplicação para guardar seus perfis favoritos do Github.
 
 </br>
 
-## 📝Sobre
+## 📝 Sobre
 
 Este é um dos projetos propostos no programa [Explorer da Rocketseat](https://www.rocketseat.com.br/explorer), os [detalhes estão aqui](https://efficient-sloth-d85.notion.site/GitFav-f8ff1c18b23745c0b46cd8d61f74b596), mas basicamente é uma aplicação que busca perfis no github e apresenta eles em uma tabela.
 

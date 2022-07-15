@@ -17,22 +17,24 @@ Esse projeto é uma aplicação para guardar seus perfis favoritos do Github.
 ## 🎬 Pré-Visualização
 
 <h1 align="center" style="max-width: 412px; margin: auto;">
-    <img src="./assets/images/preview/place-holder.jpg" alt="gif da versão mobile">
+    <img src="./assets/images/preview/mobile-version.gif" alt="gif da versão mobile">
 </h1>
 
 <h1 align="center">
-    <img src="./assets/images/preview/place-holder.jpg" alt="gif da versão desktop">
+    <img src="./assets/images/preview/desktop-version.gif" alt="gif da versão desktop">
 </h1>
 
 </br>
 
 ## 📢 Aviso
 
-- O projeto **está em andamento**, por isso é normal que bugs aconteçam.
+- O projeto **está finalizado**, porém futuras correções podeeão ser feitas.
+
+- A aplicação funciona melhor em navegadores baseados no Chromium (Chrome, Edge, Brave...);
 
 - Para testar o projeto basta [CLICAR AQUI!](https://git-fav-two.vercel.app/)
 
-- O layout foi baseado nesse [projeto do figma.](https://www.figma.com/file/hU9p7Gn7Pzw5qJpzW8nzBb/%5BDesafios-Explorer%5D-GitFav-(Copy)-(Copy)?node-id=0%3A1)
+- O layout foi criado por Daniel Duarte (Product Designer).
 
 </br>
 

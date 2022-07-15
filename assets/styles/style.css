@@ -328,7 +328,7 @@ tbody.filled-tbody tr td:first-child {
     }
 
     #search input {
-        width: 100%;
+        width: calc(100% - 4px);
     }
 
     .table-container {

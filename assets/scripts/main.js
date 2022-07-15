@@ -1,4 +1,4 @@
-import { Events } from './Events.js';
+import { Events } from './events.js';
 
 const root = document.querySelector('main');
 

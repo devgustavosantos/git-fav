@@ -42,10 +42,9 @@ Este é um dos projetos propostos no programa [Explorer da Rocketseat](https://w
 
 Além de trabalhar o HTML, CSS, JS e Git, o projeto tem a intenção de trabalhar com alguns conceitos do **clean code** e **Programação Orientada a Objetos**, como por exemplo:
 - Desestruturação;
-- Injeção de dependências;
 - Modularização;
 - Classes;
-- Heranças;
+- Herança;
 - Imutabilidade;
 
 </br>

@@ -1,4 +1,4 @@
-export default class github {
+export class GithubSearch {
     static consultOrder(user) {
         const urlUser = `https://api.github.com/users/${user}`;
         return fetch(urlUser)
